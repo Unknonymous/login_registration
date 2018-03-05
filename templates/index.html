@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for( 'static', filename='styles.css') }}">
+    <title>Login & Registration</title>
+</head>
+<body>
+    <div id="wrapper">
+        <div class="container">
+
+            <h1>Welcome.</h1>
+            <h2>Please register below.</h2>
+            
+            <div class="holdform">
+                <p>* fields are required</p>
+                <form action="/register" method="POST" id="regform">
+                    *First name: <input type="text" name="fname" class="field"><br>
+                    *Last name: <input type="text" name="lname" class="field"><br>
+                    *Email Address: <input type="text" name="email" class="field"><br>
+                    *Password: <input type="text" name="passw" class="field"><br>
+                    *P/W Confirmation: <input type="text" name="cpass" class="field"><br>
+                    <input type="submit" value="Submit" class='btncls'>
+                </form>
+
+            </div><!--closes top holdform-->
+
+        </div><!--closes top container-->
+        <div class='container'>
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul class = 'flashes'>
+                {% for message in messages %}
+                    <li class = 'red' >{{ message }}</li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+            {% endwith %}
+        </div><!--closes mid container (for flashes)-->
+
+
+        <div class="container">
+            <br>
+            <h2>Or log in here.</h2>
+
+            <div class="holdform">   
+                <p> * fields are required </p>
+                <form action="/logging" method="POST" id="logform">
+                    *Email Address: <input type="text" name="logmail" class="field"><br>
+                    *Password: <input type="text" name="logpass" class="field"><br>
+                    <input type="submit" value="Submit" class='btncls'>
+                </form>
+            </div><!--closes bottom holdform-->
+
+        </div><!--closes bottom container-->
+    </div><!--closes wrapper-->
+
+</body>
+</html>

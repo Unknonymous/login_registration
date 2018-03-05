@@ -1,0 +1,40 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    border: solid 1px red;
+    color: white;
+}
+body{
+    
+    background-color: navy;
+}
+#wrapper{
+    width: 900px;
+    background-color: black;
+    margin-left: auto;
+    margin-right: auto;
+}
+.container{
+    text-align: center;
+}
+.field{
+    margin: 5px;
+    padding: 2px;
+    border-radius: 3px;
+    background-color: black;
+}
+.btncls{
+    background-color: black;
+    padding: 3px;
+    border-radius: 2px;
+}
+.flashes{
+    text-align: center;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+.red{
+    color: red;
+    width: fit-content
+}

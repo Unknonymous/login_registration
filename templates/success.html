@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for( 'static', filename='styles.css') }}">
+    <title>Login & Registration</title>
+</head>
+<body>
+    <div id="wrapper">
+        <div class="container">
+
+            <h1>Welcome, <br>{{ logInfo[0].name }}!</h1>
+            <h2>You are logged in with {{ logInfo[0].email }}</h2>
+            
+            
+        </div><!--container-->
+    </div><!--closes wrapper-->
+
+</body>
+</html>
